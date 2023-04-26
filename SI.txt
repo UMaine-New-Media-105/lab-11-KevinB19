@@ -1,0 +1,79 @@
+Graphics improvements:
+1. Make the invader look more like a spaceship; change the body to an oval with a small circle on top, and make it gray
+2. Change the background to black
+3. Add stars in the back
+
+Gameplay improvements:
+1. Make the ships fall slower and speed up as time goes by
+2. Add multiple ships at a time
+3. Only allow ships to spawn within a certain x radius of the ship to make it easier
+4. have hearts fall that the player can shoot for more lives
+
+function setup() {
+  createCanvas(400, 400);
+  lives = 3;
+  eShipSpeed = 5;
+  while (lives > 0){
+  eShipSpeed +=.05
+  }
+  
+  eShips= []
+  
+/*
+Create a loop to spawn new ships
+if 
+while (lives > 0){
+if (eships.length < 2){
+enemyShip.push(new eShip(random((ship.x - (ship.x *2)), ship.x * 2), 0)
+}
+
+while(lives > 0 || lives < 3){
+  spawn heart at random interval
+  if shot increase life count by 1
+}
+
+*/
+  
+//   let ship = ship(x, y)
+}
+function draw() {
+  background(black);
+  for( let i = 0; i < 30; i++){
+    ellipse(random(width), random(height), 10, 10)
+  }
+  
+//   ship.display
+//   ship.update
+  
+
+/*   for(let i =0, i < eShips.size; i++){
+  let collided = laserCollisionDetection(laser, eShip[i])
+  if collided then delete ship from array, else continue
+}
+  */
+  
+}
+
+
+class ship{
+ /*
+ constructor(x)
+ 
+ update(x){
+ this.x += x
+ // Make it move based on keys
+ when left arrow key pressed, go left
+ when right arrow key pressed, go right
+ }
+ 
+ display(){
+ same as eShip
+ }
+}
+class eShip(x,y){
+this.y = this.y + eShipSpeed
+ ellipse(x, y, 50, 10)
+ ellipse(x, y, 20, 10)
+}
+
+
